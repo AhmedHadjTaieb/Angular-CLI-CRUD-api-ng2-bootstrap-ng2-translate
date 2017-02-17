@@ -1,0 +1,70 @@
+<h3>Chercher un film</h3>
+
+<div *ngIf="visible">
+  <alert [type]="type" ><span [innerHtml]="msg"></span></alert>
+</div>
+<hr>
+
+<div class="example-container">
+  <label for="id">ID du film:</label>
+  <input type="text" #id id="id" md-input placeholder="#ID#"  (keyup)="onKey(id.value)" required>
+  <button
+    type="submit" md-mini-fab (click)="onCherche(id.value)"><i class="material-icons">youtube_searched_for</i></button>
+</div>
+<hr>
+
+<div [collapse]="!isCollapsed"
+     class="card card-block card-header ">
+  <div class="well well-lg">
+    <ul>
+      <li>Titre : {{ nom }}</li>
+      <li>Année : {{ annee }}</li>
+    </ul>
+    <hr>
+    <div class="btn">
+      <button type="button" class="btn1" md-mini-fab (click)="onModifier()"><i class="material-icons">build</i></button>
+      <button type="button" class="btn2" md-mini-fab (click)="onDelete(id.value)"><i class="material-icons ">delete_forever</i>
+      </button>
+    </div>
+
+  </div>
+
+</div>
+<div bsModal #childModaldelete="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Suppression Effectuer</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideChildModaldelete()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Le film est supprimer !
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #childModalmodifier="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modification du Film</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="hideChildModalmodifier()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <label for="nom">Titre</label>
+        <input id="nom" #titre type="text" value="{{ nom }}" required>
+        <label for="annee">Année</label>
+        <input id="annee" #year type="number"  value="{{ annee }}" required>
+        <hr>
+        <button style="color: aliceblue;" type="button" md-button (click)="onValide(titre.value,year.value,id.value)"><i class="material-icons">done_all</i></button>
+      </div>
+    </div>
+  </div>
+</div>

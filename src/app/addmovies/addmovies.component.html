@@ -1,0 +1,26 @@
+<h2>
+  Ajouter un nouveau film :
+</h2>
+
+<div *ngFor="let alert of alerts">
+  <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout">{{ alert.msg }}</alert>
+</div>
+<hr>
+<form [formGroup]="MovieForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Titre</label>
+    <input type="text" id="title" class="form-control"
+           required formControlName="title" minlength="2" maxlength="24"
+           name="title" placeholder="Titre">
+
+  </div>
+  <div class="form-group">
+    <label for="year">Année</label>
+    <input type="number" id="year" class="form-control"
+           name="year" formControlName="year"
+           placeholder="Année">
+  </div>
+
+  <button type="button" (click)="onSubmit()" class="btn btn-success">Envoyee</button>
+<button type="reset" class="btn btn-warning">Nouveau</button>
+</form>

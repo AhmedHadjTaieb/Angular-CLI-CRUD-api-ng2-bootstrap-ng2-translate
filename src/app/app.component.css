@@ -1,0 +1,24 @@
+.langue{
+  position:absolute;
+  top: 10px;
+  right:0;
+width: 60px;
+}
+.en{
+  background-image: url('../assets/img/en.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}
+.fr{
+  background-image: url('../assets/img/fr.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
+}

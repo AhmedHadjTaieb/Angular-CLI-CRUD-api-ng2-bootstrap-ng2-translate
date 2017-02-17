@@ -1,0 +1,34 @@
+<h3>
+  {{ "titlepageadd" | translate }} :
+</h3>
+
+<hr>
+<accordion>
+  <accordion-group #group *ngFor="let film of movies">
+    <div accordion-heading>
+      {{ film.title }}
+      <i class="pull-right float-xs-right glyphicon"
+         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+    </div>
+    <div>
+      <ul>
+        <li>
+          ID : <strong>{{ film.id }}</strong>
+        </li>
+        <li>
+          {{ "li-year" | translate }} : <strong>{{ film.year }}</strong>
+        </li>
+      </ul>
+    </div>
+
+  </accordion-group>
+</accordion>
+<div *ngIf="visible">
+  <alert type="info"> {{ "alert.visible" | translate }}</alert>
+</div>
+<div [innerHtml]="htmlText"></div>
+<hr>
+<h5 class="modal-header" *ngIf="nombrefilm ===1">{{ "h5-nbr1" | translate }}{{ "h5-nbr" | translate }} </h5>
+<h5 class="modal-header" *ngIf="nombrefilm >1">{{ "h5-nbr1" | translate }} {{ nombrefilm }} {{ "h5-nbr2" | translate
+  }}</h5>
+

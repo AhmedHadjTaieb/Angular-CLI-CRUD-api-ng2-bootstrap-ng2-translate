@@ -1,0 +1,15 @@
+{
+  "nav1": "Movies",
+  "nav2": "ADD Movie",
+  "nav3": "Find Movie",
+  "titlepageadd":"Movies",
+  "li-year":"Year",
+  "h5-nbr":" one movie ",
+  "h5-nbr1":"You have see ",
+  "h5-nbr2":" movies in the last time",
+  "alert.visible":"NO Movies !",
+  "titlefilm":"Title",
+  "input.cherche": "Search"
+
+
+}

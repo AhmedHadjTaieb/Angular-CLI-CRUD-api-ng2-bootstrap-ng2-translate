@@ -1,0 +1,15 @@
+{
+  "nav1": "Films",
+  "nav2": "Ajout Film",
+  "nav3": "Recherche Film",
+  "titlepageadd":"Films",
+  "li-year":"Année",
+  "h5-nbr":" un seul film la derniere fois",
+  "h5-nbr1":"Vous avez vu",
+  "h5-nbr2":" films la derniere fois",
+  "alert.visible":"Il n'existe pas de film !",
+  "titlefilm":"Titre",
+  "input.cherche": "Recherche"
+
+
+}

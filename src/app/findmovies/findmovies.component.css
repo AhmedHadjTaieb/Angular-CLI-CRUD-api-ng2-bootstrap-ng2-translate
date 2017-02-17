@@ -1,0 +1,17 @@
+.btn {
+  width: 100%;
+  text-align: center;
+
+}
+
+.btn1 {
+  margin-right: 60px;
+  margin-left: 60px;
+  background-color: khaki;
+}
+
+.btn2 {
+  margin-right: 60px;
+  margin-left: 60px;
+  background-color: lightcoral;
+}

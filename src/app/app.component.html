@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" routerLink="/Movies" routerLinkActive="active">{{ 'nav1' | translate }}</a>
+  <a class="navbar-brand" routerLink="/ADD-Movies" routerLinkActive="active">{{ 'nav2' | translate }}</a>
+  <a class="navbar-brand" routerLink="/Find-Movies" routerLinkActive="active">{{ 'nav3' | translate }}</a>
+  <div class="langue">
+  <button type="button" (click)="translateEN()" class="en"></button>
+  <button type="button"(click)="translateFR()" class="fr"></button>
+  </div>
+</nav>
+
+<hr>
+<router-outlet></router-outlet>
+
